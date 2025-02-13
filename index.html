@@ -8,6 +8,7 @@
         body {
             text-align: center;
             font-family: Arial, sans-serif;
+            overflow: auto; /* Enables scrolling */
             background-color: pink;
             overflow: hidden;
         }
@@ -35,14 +36,26 @@
             position: relative;
         }
         .image-gallery {
-            margin-top: 50px;
-        }
-        .image-gallery img {
-            width: 200px;
-            height: auto;
-            margin: 10px;
-            border-radius: 10px;
-        }
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px; /* Even spacing between images */
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+}
+
+.image-gallery img {
+    width: 200px; /* Scaled-down size */
+    height: 200px; /* Keep a square look */
+    object-fit: cover; /* Prevents distortion */
+    border-radius: 10px;
+    
+}
+
+        
         .login-container {
             position: fixed;
             top: 0;
